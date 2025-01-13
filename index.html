@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>【未来探求Ⅰ】旧知の窮地を救え！～外来種クイズ～</title>
+        <!-- reset css -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- styles -->
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <p>This sentence is for a test.</p>
+        <header>
+            <a href="index.html"><img class="home" src="images/home_icon.png" alt="ホーム画面"></a>
+            <h1>SDGsQuiz</h1>
+            <a class="answer-questionnaire" href="https://forms.gle/juoU57KzbQiExSvu8">アンケートに回答</a>
+            <!-- ここにheader画像を挿入 -->
+        </header>
+        <div class="background-image"></div>
+        <div class="main">
+            <h1>【外来種クイズ】外来種と在来種を正しく見分けられますか？あなたの知識をチェック！</h1>
+            <img class="biodiversity" src="images/biodiversity.jpg" alt="生物多様性">
+            <p class="description">遠いようで、意外と身近な外来種問題。しかしながら、その認知度はあまり高いものではありません。このクイズを通して、少しでもこの問題に興味を持ってもらえたら嬉しいです！</p>
+            <h2 class="title">第一問</h2>
+            <p class="description question">「特定外来生物に指定された動物の飼育には、次のうちどれが必要？」</p>
+            <p class="description">特定外来生物は、生態系や人の命・身体、農林水産業へ被害を及ぼすおそれのある外来生物の中から選ばれます。通常では指定された生物の輸入や放出、飼養、譲渡が禁止されています（アライグマやアメリカザリガニなどもその一種）。</p>
+            <!-- ポップアップ付きボタンテンプレート / 数字部分だけ変更して再利用可 -->
+            <!-- ボタン部分 -->
+            <div class="answer-buttons01">
+                <p><label class="answer-button0101" for="answerFlag0101">特定のケージ</label></p>
+                <p><label class="answer-button0101" for="answerFlag0101">飼育日誌</label></p>
+                <p><label class="answer-button0102" for="answerFlag0102">環境省の許可</label></p>
+            </div>
+            <!-- ポップアップ部分 -->
+            <input type="checkbox" class="answer-flag" id="answerFlag0101">
+            <label class="answer-background" for="answerFlag0101"></label>
+            <div class="answer">
+                <label class="close" for="answerFlag0101">×</label>
+                <div class="content">
+                    <h3>不正解</h3>
+                    <p>残念でした...。</p>
+                </div>
+            </div>
+            <!---->
+            <!-- ポップアップ部分 -->
+            <input type="checkbox" class="answer-flag" id="answerFlag0102">
+            <label class="answer-background" for="answerFlag0102"></label>
+            <div class="answer">
+                <label class="close" for="answerFlag0102">×</label>
+                <div class="content">
+                    <h3>正解！</h3>
+                    <p>おめでとうございます！</p>
+                </div>
+            </div>
+            <!---->
+            <p>　</p>
+        </div>
+        <script>
+
+        </script>
     </body>
 </html>

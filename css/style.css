@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+    background-color: #00ebc7;
+    color: #494949;
+}
+body {
+    font-family: "Noto Sans JP";
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* header */
+header {
+    display: flex;
+    margin: 0 auto;
+    background-color: #ff5470;
+}
+.home {
+    width: 64px;
+    margin: auto;
+    margin-left: 2%;
+}
+header h1 {
+    font-family: "Jost", serif;
+    margin: auto;
+    color: #fffffe;
+}
+header .answer-questionnaire {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2%;
+
+    color: #ff5470;
+    background-color: #fffffe;
+    
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 100vh;
+}
+header .answer-questionnaire:hover {
+    color: #494949;
+    background-color: #fde24f;
+}
+
+/* background_image */
+.background-image {
+    width: 100%;
+    padding-top: 33%;
+    margin: auto;
+    background-image: url(../images/header_image.png);
+    background-size: 100% auto;
+}
+
+/* main */
+.main {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    margin: 50px auto;
+    background-color: #fffffe;
+    border-radius: 30px;
+}
+.main h1 {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.main .biodiversity {
+    width: 100%;
+    padding: 25px;
+    border-radius: 50px;
+}
+.main .description {
+    margin-right: 25px;
+    margin-left: 25px;
+    font-size: 18px;
+
+}
+.main .title {
+    margin: 25px;
+    padding: 0.4em 0.5em;
+    background: #f4f4f4;
+    border-left: solid 5px #fde24f;
+    border-bottom: solid 3px #d7d7d7;
+}
+.main .question {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ポップアップ付きボタンテンプレート */
+/* ボタン部分 */
+.answer-buttons01 {
+    margin-top: 20px;
+    text-align: center;
+}
+.answer-buttons01 > * {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding: 5px 20px;
+    border-radius: 100vh;
+    background-color: #fde24f;
+
+    border-bottom: 5px solid #d8c34b;
+}
+.answer-buttons01 > *:hover {
+    background-color: #d8c34b;
+    border-bottom: 5px solid #d8c34b;
+}
+
+/* ポップアップ部分 */
+.answer-background {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: gray;
+    opacity: 0.5;
+}
+.answer {
+    --height: 200px;
+    --width: 500px;
+    z-index: 101;
+    position: fixed;
+    top: calc(50vh - calc(var(--height) / 2));
+    left: calc(50vw - calc(var(--width) / 2));
+    height: var(--height);
+    width: var(--width);
+
+    overflow: hidden;
+    background-color: #fffffe;
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px 1px gray;
+}
+.answer > .close {
+    --size: 30px;
+    position: absolute;
+    top: calc(var(--size) / 4);
+    left: calc(var(--width) - var(--size) * 5 / 4);
+    height: var(--size);
+    width: var(--size);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: gray;
+    font-size: var(--size);
+    border-radius: 10px;
+}
+.answer > .close:hover {
+    background-color: orangered;
+    color: #fffffe;
+}
+.answer > .content {
+    padding: 25px;
+}
+.answer-flag {
+    display: none;
+}
+.answer-flag:not(:checked) + .answer-background {
+    display: none;
+}
+.answer-flag:not(:checked) + * + .answer {
+    display: none;
+}
