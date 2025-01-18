@@ -2,7 +2,7 @@
 
 /* 共通部分 */
 html {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     color: #363427;
     font-family: "Noto Sans JP";
     font-size: 100%;
@@ -56,94 +56,114 @@ li {
     width: 50px;
 }
 
-/* 背景画像 */
-.background {    background-image: url(https://MarronCMD.github.io/SDGsQuiz/background.png);
-    background-size: 100% auto;
-    margin: auto;
-    margin-top: 70px;
-    padding-top: 33%;
-    width: 100%;
-}
-
-/* メイン部分 */
-.main {
+/* クイズ部分 */
+.quiz {
     background-color: #ffffff;
     border-top: 7px solid #ffdb58;
     box-shadow: 0 0 8px gray;
     height: auto;
-    margin: 50px auto;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 110px;
     max-width: 1280px;
     padding: 25px 25px;
     width: 95%;
 }
-.main-header {
-    border-bottom: double 5px #ffdb58;
+.quiz-title {
+    background: #f4f4f4;
+    border-bottom: solid 5px #d7d7d7;
+    border-left: solid 3px #ffdb58;
+    margin: 30px auto;
+    padding: 0.4em 0.5em;
+    width: 90%;
+}
+.quiz-question {
     margin: 0 auto;
     width: 90%;
 }
-.main-image {
-    display: flex;
-    margin: 25px auto;
-    width: 90%;
-}
-.main-description {
+.quiz-description{
     font-size: 18px;
     line-height: 1.8;
     margin: 0 auto;
     width: 90%;
 }
-
-/* クイズ部分 */
-.quiz-header {
-    background: #f4f4f4;
-    border-bottom: solid 5px #d7d7d7;
-    border-left: solid 3px #ffdb58;
-    margin: 50px auto;
-    padding: 0.4em 0.5em;
-    width: 90%;
+.image-wrapper {
+    display: flex;
 }
-.start-button {
+.quiz-image01{
+    margin-left: 5%;
+    margin-top: 25px;
+    width: 40%;
+}
+.quiz-image02 {
+    margin-left: 10%;
+    margin-top: 25px;
+    width: 40%;
+}
+.button-wrapper {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.button-wrapper> * {
     background-color: #ffdb58;
     border-bottom: 7px solid #e2c24f;
     border-radius: 5px;
     color: #363427;
-    display: block;
     font-weight: bold;
-    margin: auto;
-    padding: 1rem 4rem;
+    margin: 25px auto;
+    padding: 1rem 0;
     text-align: center;
-    width: 50%;
+    width: 70%;
 }
-.start-button:hover {
+.button-wrapper > *:hover {
     border-bottom: 1px solid #e2c24f;
     margin-top: 6px;
 }
-.quiz-description {
-    font-size: 18px;
-    line-height: 1.8;
-    margin: 50px auto;
-    width: 90%;
+
+/* ポップアップ部分 */
+.answer-background {
+    background-color: gray;
+    height: 100vh;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+.answer {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 1px gray;
+    height: auto;
+	left: 50%;
+    overflow: hidden;
+    position: fixed;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+    width: 50%;
+    z-index: 101;
+}
+.answer > .content {
+    padding: 25px;
+}
+.answer-flag {
+    display: none;
+}
+.answer-flag:not(:checked)+ .answer-background {
+    display: none;
+}
+.answer-flag:not(:checked) + * + .answer {
+    display: none;
 }
 
-/* 解説部分 */
-.explanation-header {
-    background: #f4f4f4;
-    border-bottom: solid 5px #d7d7d7;
-    border-left: solid 3px #ffdb58;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 0.4em 0.5em;
-    width: 90%;
+.answer-title {
+    text-align: center;
 }
-.explanation-title {
-    margin: 0 auto;
-    margin-top: 25px;
-    width: 90%;
-}
-.explanation-description {
+.answer-description {
     font-size: 18px;
     line-height: 1.8;
-    margin: 5px auto;
+    margin: 25px auto;
     width: 90%;
 }
 

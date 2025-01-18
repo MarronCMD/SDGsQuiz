@@ -1,68 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>【未来探求Ⅰ】旧知の窮地を救え！～外来種クイズ～</title>
-        <!-- reset css -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>【未来探求】旧知の窮地を救え！～外来種クイズ～</title>
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <!-- styles -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <a href="index.html"><img class="home" src="https://marroncmd.github.io/upload_images/home_icon.png" alt="ホーム画面"></a>
-            <h1>SDGsQuiz</h1>
-            <a class="answer-questionnaire" href="https://forms.gle/juoU57KzbQiExSvu8">アンケートに回答</a>
-            <!-- ここにheader画像を挿入 -->
+        <header class="header">
+            <h1 class="header-logo">SDGsQuiz</h1>
+            <nav class="header-nav">
+                <a class="detail-button" href="https://www.unicef.or.jp/kodomo/sdgs/17goals/15-land/">テーマについて</a>
+                <a class="questionnaire-button" href="https://forms.gle/juoU57KzbQiExSvu8">アンケート</a>
+                <a href="index.html"><img class="home-button" src="https://MarronCMD.github.io/SDGsQuiz/home_button.png" alt="ホームボタン"></a>
+            </nav>
         </header>
-        <div class="background-image"></div>
-        <div class="main">
-            <h1>【外来種クイズ】外来種と在来種を正しく見分けられますか？あなたの知識をチェック！</h1>
-            <img class="biodiversity" src="https://marroncmd.github.io/upload_images/biodiversity.jpg" alt="生物多様性">
-            <p class="description">遠いようで、意外と身近な外来種問題。しかしながら、その認知度はあまり高いものではありません。このクイズを通して、少しでもこの問題に興味を持ってもらえたら嬉しいです！</p>
-            <h2 class="title">第一問</h2>
-            <p class="description question">「特定外来生物に指定された動物の飼育には、次のうちどれが必要？」</p>
-            <p class="description">特定外来生物は、生態系や人の命・身体、農林水産業へ被害を及ぼすおそれのある外来生物の中から選ばれます。通常では指定された生物の輸入や放出、飼養、譲渡が禁止されています（アライグマやアメリカザリガニなどもその一種）。</p>
-            <!-- ポップアップ付きボタンテンプレート / 数字部分だけ変更して再利用可 -->
-            <!-- ボタン部分 -->
-            <div class="answer-buttons01">
-                <p><label class="answer-button0101" for="answerFlag0101">特定のケージ</label></p>
-                <p><label class="answer-button0101" for="answerFlag0101">飼育日誌</label></p>
-                <p><label class="answer-button0102" for="answerFlag0102">環境省の許可</label></p>
-            </div>
-            <!-- ポップアップ部分 -->
-            <input type="checkbox" class="answer-flag" id="answerFlag0101">
-            <label class="answer-background" for="answerFlag0101"></label>
-            <div class="answer">
-                <label class="close" for="answerFlag0101">×</label>
-                <div class="content">
-                    <h3>不正解</h3>
-                    <p>残念でした...。</p>
-                </div>
-            </div>
-            <!---->
-            <!-- ポップアップ部分 -->
-            <input type="checkbox" class="answer-flag" id="answerFlag0102">
-            <label class="answer-background" for="answerFlag0102"></label>
-            <div class="answer">
-                <label class="close" for="answerFlag0102">×</label>
-                <div class="content">
-                    <h3>正解！</h3>
-                    <p>おめでとうございます！</p>
-                </div>
-            </div>
-            <!---->
-            <p>　</p>
-        </div>
-        <script>
+        <div class="background"></div>
 
-        </script>
+        <div class="main">
+            <h1 class="main-header">【陸の豊かさを守ろう】クイズで学ぶ、生き物のあれこれ</h1>
+            <img class="main-image" src="https://MarronCMD.github.io/SDGsQuiz/biodiversity.jpg" alt="生物多様性">
+            <p class="main-description">知っているようで意外と知らない、生き物のあれこれ。今回は、その中でも特に自然への影響が大きい「外来種」についてのクイズを作成しました。生き物が好きな方もそうでない方も、このクイズを通して環境問題への理解を深めていきましょう！今後の活動のため、アンケートへのご協力もよろしくお願いします！</p>
+            
+            <div class="quiz">
+                <h2 class="quiz-header">クイズに挑戦！</h1>
+                <a class="start-button" href="html/quiz.html">クイズスタート！（全５問）</a>
+                <p class="quiz-description">クイズは全部で5問用意してあります。この問題に少しでも興味が沸いた方は、ページ下にある解説部分をぜひご参考ください！</p>
+            </div>
+
+            <div class="explanation">
+                <h2 class="explanation-header">詳しく知りたい方へ</h2>
+                <h3 class="explanation-title">外来生物法とは</h3>
+                <p class="explanation-description">正式名称を「特定外来生物による生態系等に係る被害の防止に関する法律」といいます。この法律は、特定外来生物による生態系の破壊に加え人間の生命・身体や農林水産業への被害を防ぎ、国民生活の安定向上に資するために作られました。問題を引き起こす海外起源の生物を「特定外来生物」として指定し、その程度によって対応を行っていくことが基本となります。現在で156種類の生物が登録されており、被害がすでに生じているとされた場合は防除を行う制度が定められています。防除の段階は指定から「飼育・栽培・保管・運搬・輸入の禁止／防除」を通して行われていきます。</p>
+                <h3 class="explanation-title">侵略的外来生物とは</h3>
+                <p class="explanation-description">日本生態学会が定めた、環境に著しい悪影響を及ぼす可能性のある生物たちです。特に影響の大きいものは「日本の侵略的外来種ワースト100」として登録されています。少しピックアップしてご紹介しましょう。哺乳類では10種が選定され、その中にはアライグマやヤギなど我々も良く知る生物が入っています。雑食性や放置により深刻な食害を引き起こした過去があるため注意が必要です。分類を問わず見ると、私たちの調査でも上位に位置していたアメリカザリガニやミシシッピアカミミガメなどが指定されており、知名度に見合った危険性を秘めていることがわかります。</p>
+            </div>
+        </div>
     </body>
 </html>
